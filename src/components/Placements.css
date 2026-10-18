@@ -1,0 +1,738 @@
+
+/* =========================================
+   CSBS PLACEMENTS - MAIN SECTION
+========================================= */
+
+.placements-section {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 24px 90px;
+  color: #193b60;
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(123, 196, 255, 0.24), transparent 42%),
+    radial-gradient(ellipse at 90% 60%, rgba(170, 220, 255, 0.3), transparent 40%),
+    linear-gradient(135deg, #f5faff, #e8f4ff 52%, #f8fbff);
+  scroll-margin-top: 90px;
+}
+
+.placements-container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(48, 105, 157, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Main placement heading */
+
+.placements-hero {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  padding: 42px 35px;
+  text-align: center;
+}
+
+.placements-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #3783bd;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.placements-hero h2 {
+  margin: 0 0 12px;
+  color: #183c63;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+}
+
+.placements-hero h3 {
+  margin: 0 0 15px;
+  color: #347fb5;
+  font-size: clamp(1.15rem, 2.4vw, 1.65rem);
+}
+
+.placements-hero p,
+.placement-section-heading p {
+  max-width: 690px;
+  margin: 0 auto;
+  color: #5a718a;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Section title */
+
+.placement-section-heading {
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.placement-section-heading h2 {
+  margin: 0 0 10px;
+  color: #1c4168;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+}
+
+/* Three batch cards */
+
+.placement-batch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.placement-batch-card {
+  display: flex;
+  min-width: 0;
+  min-height: 220px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 12px 35px rgba(49, 105, 158, 0.1);
+  color: #193e65;
+  text-decoration: none;
+  text-align: left;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: placementDetailEnter 0.55s ease both;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.placement-batch-card:hover {
+  transform: translateY(-7px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 42px rgba(49, 105, 158, 0.18);
+}
+
+.placement-card-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.placement-card-label {
+  color: #3986be;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.placement-card-content h3 {
+  margin: 20px 0 0;
+  color: #193e65;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.placement-card-content p {
+  margin: 7px 0 0;
+  color: #647b93;
+  font-size: 0.98rem;
+}
+
+.placement-card-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #287fbd;
+  font-weight: 750;
+  transition: gap 0.2s ease;
+}
+
+.placement-batch-card:hover .placement-card-link {
+  gap: 13px;
+}
+
+/* =========================================
+   BATCH DETAIL PAGE
+========================================= */
+
+.placement-detail-page {
+  min-height: 100vh;
+  padding: 36px 24px 50px;
+  animation: placementDetailEnter 0.45s ease both;
+}
+
+.placement-detail-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Back button */
+
+.placement-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 10px 16px;
+  border: 1px solid rgba(111, 163, 204, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #285b82;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.placement-back-button:hover {
+  background: #ffffff;
+  transform: translateX(-3px);
+}
+
+/* Batch title */
+
+.placement-detail-heading {
+  margin-bottom: 22px;
+  animation: placementDetailEnter 0.55s ease both;
+}
+
+.placement-detail-heading .placements-eyebrow {
+  margin-bottom: 6px;
+  color: #5487b0;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+}
+
+.placement-detail-heading h1 {
+  margin: 0;
+  color: #244f73;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  line-height: 1.25;
+}
+
+.placement-detail-heading p {
+  margin: 7px 0 0;
+  color: #68839a;
+  font-size: 0.98rem;
+}
+
+/* Overview and highlights */
+
+.placement-detail-info-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.placement-overview-box,
+.placement-highlights-box {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 10px 28px rgba(49, 105, 158, 0.09);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.placement-overview-box {
+  animation: placementBoxEnter 0.55s ease both;
+}
+
+.placement-highlights-box {
+  animation: placementBoxEnter 0.65s ease both;
+}
+
+.placement-box-kicker {
+  display: block;
+  margin-bottom: 7px;
+  color: #5d91b9;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+.placement-overview-box h2,
+.placement-highlights-box h2,
+.placement-gallery-heading h2 {
+  margin: 0 0 12px;
+  color: #285679;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.placement-overview-box p {
+  margin: 0;
+  color: #58738a;
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+/* Animated highlights list */
+
+.placement-highlights-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.placement-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #4c687e;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  opacity: 0;
+  animation: placementPointPop 0.55s cubic-bezier(0.2, 0.75, 0.25, 1) forwards;
+}
+
+.placement-highlight-check {
+  display: inline-flex;
+  flex: 0 0 23px;
+  width: 23px;
+  height: 23px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: #e2f4e9;
+  color: #318355;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+/* =========================================
+   PLACEMENT PHOTO GALLERY
+========================================= */
+
+.placement-gallery-section {
+  animation: placementDetailEnter 0.7s ease both;
+}
+
+.placement-gallery-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 13px;
+}
+
+.placement-gallery-heading h2 {
+  margin-bottom: 0;
+}
+
+.placement-gallery-heading > p {
+  margin: 0 0 2px;
+  color: #68839a;
+  font-size: 0.84rem;
+}
+
+.placement-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.placement-gallery-grid.placement-gallery-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.placement-gallery-photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  background: #e8f2fa;
+  box-shadow: 0 8px 22px rgba(49, 105, 158, 0.12);
+  cursor: zoom-in;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.placement-gallery-photo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 13px 28px rgba(49, 105, 158, 0.18);
+}
+
+.placement-gallery-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.placement-gallery-photo:hover img {
+  transform: scale(1.035);
+}
+
+.placement-photo-zoom {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  color: #285b82;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.placement-gallery-photo:hover .placement-photo-zoom,
+.placement-gallery-photo:focus-visible .placement-photo-zoom {
+  opacity: 1;
+}
+
+/* =========================================
+   PHOTO LIGHTBOX
+========================================= */
+
+.placement-lightbox {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 60px 70px;
+  background: rgba(18, 37, 55, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: placementLightboxFade 0.22s ease both;
+}
+
+.placement-lightbox-image {
+  position: relative;
+  display: block;
+  flex: 0 1 auto;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 140px);
+  max-height: calc(100vh - 120px);
+  object-fit: contain;
+  object-position: center;
+  margin: auto;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  animation: placementImageZoom 0.25s ease both;
+}
+
+.placement-lightbox-close {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  right: 24px;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.placement-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.placement-lightbox-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: flex;
+  width: 44px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 2.4rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.placement-lightbox-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.placement-lightbox-prev {
+  left: 18px;
+}
+
+.placement-lightbox-next {
+  right: 18px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes placementDetailEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes placementBoxEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes placementPointPop {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes placementLightboxFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes placementImageZoom {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+  .placement-batch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .placement-detail-info-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 760px) {
+  .placements-section {
+    padding: 50px 18px 65px;
+  }
+
+  .placement-detail-page {
+    padding: 28px 18px 40px;
+  }
+
+  .placements-hero {
+    padding: 32px 24px;
+  }
+
+  .placement-overview-box,
+  .placement-highlights-box {
+    padding: 19px;
+  }
+
+  .placement-gallery-grid {
+    gap: 10px;
+  }
+
+  .placement-gallery-grid.placement-gallery-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .placement-lightbox {
+    padding: 55px 20px;
+  }
+
+  .placement-lightbox-image {
+    max-width: calc(100vw - 40px);
+    max-height: calc(100dvh - 140px);
+  }
+
+  .placement-lightbox-prev {
+    left: 5px;
+  }
+
+  .placement-lightbox-next {
+    right: 5px;
+  }
+}
+
+@media (max-width: 560px) {
+  .placements-section {
+    padding: 45px 16px 60px;
+  }
+
+  .placements-hero {
+    margin-bottom: 38px;
+    padding: 30px 20px;
+    border-radius: 22px;
+  }
+
+  .placement-batch-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .placement-batch-card {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+  .placement-detail-page {
+    padding: 22px 16px 35px;
+  }
+
+  .placement-detail-heading h1 {
+    font-size: 1.55rem;
+  }
+
+  .placement-gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .placement-gallery-grid,
+  .placement-gallery-grid.placement-gallery-three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .placement-gallery-photo {
+    border-radius: 11px;
+  }
+
+  .placement-photo-zoom {
+    right: 6px;
+    bottom: 6px;
+    width: 27px;
+    height: 27px;
+    opacity: 1;
+  }
+
+  .placement-lightbox {
+    padding: 55px 12px;
+  }
+
+  .placement-lightbox-image {
+    max-width: calc(100vw - 24px);
+    max-height: calc(100dvh - 120px);
+  }
+
+  .placement-lightbox-close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .placement-lightbox-arrow {
+    width: 35px;
+    height: 44px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY: REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .placement-batch-card,
+  .placement-gallery-photo,
+  .placement-gallery-photo img,
+  .placement-back-button {
+    transition: none;
+  }
+
+  .placement-detail-page,
+  .placement-detail-heading,
+  .placement-overview-box,
+  .placement-highlights-box,
+  .placement-highlight-item,
+  .placement-gallery-section,
+  .placement-batch-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
